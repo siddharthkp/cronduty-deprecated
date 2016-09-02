@@ -1,6 +1,9 @@
 {
   "name": "cronduty",
   "version": "0.0.1",
+  "engines": {
+    "node": "6.2.2"
+  },
   "description": "simple cron monitoring",
   "main": "index.js",
   "scripts": {
