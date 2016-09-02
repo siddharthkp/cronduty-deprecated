@@ -1,4 +1,4 @@
-const db = require('./datastore.js');
+const db = require('./datastore');
 
 let get = (req, res) => {
     let id = req.params.id;
