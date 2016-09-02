@@ -1,5 +1,6 @@
-const ping = require('./ping');
-const get = require('./get');
+const register = require('./src/register');
+const ping = require('./src/ping');
+const get = require('./src/get');
 
 const express = require('express');
 const app = express();
@@ -10,4 +11,5 @@ app.listen(port);
 app.get('/start/:id', ping.start);
 app.get('/done/:id', ping.done);
 app.get('/get/:id', get);
+app.post('/register', register);
 
