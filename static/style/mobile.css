@@ -1,0 +1,18 @@
+@media screen and (max-width: 480px) {
+    .row {
+        border-bottom: 1px solid #EEE;
+    }
+    .wide {
+        width: 90%;
+    }
+    .cell.big {
+        width: 100%;
+    }
+    .cell {
+        width: 50%;
+        margin: 10px auto;
+    }
+    .graph {
+        display: none;
+    }
+}
