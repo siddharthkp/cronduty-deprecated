@@ -36,6 +36,7 @@ let dashboard = (req, res) => {
     }
     users.get(token, (user) => {
         getCrons(token, (crons) => {
+            if (!crons.length) res.render('dashboard', {user, crons});
             for (let i = 0; i < crons.length; i++) {
                 let cron = crons[i];
                 cron.time = prettycron.toString(cron.time);
