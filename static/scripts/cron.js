@@ -1,4 +1,10 @@
 $(function($){
+
+    if (!$('.crons').children().length) {
+        $('#add').addClass('hidden');
+        $('.form').removeClass('hidden');
+    }
+
     $('#save').on('click', function() {
         $('.form input').removeClass('error');
         $('.form label.error').html('');
