@@ -9,9 +9,9 @@ link(rel='stylesheet', type='text/css', href='style/graph.css')
 
 include ./logo.pug
 
-.crons.list.center.wide
+.crons.list.center.wide.extra.room
     each cron in crons
-        .row.extra.room
+        .row.room
             .cell.big
                 div !{cron.id} : !{cron.name}
                 .description !{cron.time}
