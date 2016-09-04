@@ -2,6 +2,7 @@ const ping = require('./src/ping');
 const web = require('./src/web');
 const auth = require('./src/auth');
 const cron = require('./src/cron');
+const status = require('./src/status');
 
 const express = require('express');
 const app = express();
@@ -30,3 +31,4 @@ app.get('/', web.dashboard);
 
 app.post('/cron', cron.save);
 
+app.get('/status', status);
