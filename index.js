@@ -26,6 +26,7 @@ app.get('/login', web.login);
 app.get('/auth', auth);
 
 app.get('/dashboard', web.dashboard);
+app.get('/', web.dashboard);
 
 app.post('/cron', cron.save);
 
