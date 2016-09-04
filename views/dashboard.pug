@@ -12,7 +12,7 @@ include ./logo.pug
 .crons.list.center.wide.extra.room
     each cron in crons
         .row.room
-            .cell.big
+            .cell.big(style='padding-right: 40px')
                 div !{cron.id} : !{cron.name}
                 .description !{cron.time}
             .cell
