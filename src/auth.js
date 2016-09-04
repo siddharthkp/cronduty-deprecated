@@ -1,3 +1,4 @@
+require('dotenv').config();
 const github = require('./github');
 const db = require('./datastore');
 

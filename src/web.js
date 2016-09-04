@@ -1,10 +1,13 @@
+require('dotenv').config();
+const client_id = process.env.github_id;
+
 const db = require('./datastore');
 const users = require('./users');
 const prettycron = require('prettycron');
 const moment = require('moment');
 
 let login = (req, res) => {
-    res.render('login');
+    res.render('login', {client_id});
 };
 
 let getPings = (id, callback) => {
