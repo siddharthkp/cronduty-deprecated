@@ -1,4 +1,4 @@
-if (process.env.dev) require('dotenv').config();
+if (!process.env.production) require('dotenv').config();
 const github = require('./github');
 const db = require('./datastore');
 

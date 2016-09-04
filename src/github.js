@@ -1,4 +1,4 @@
-if (process.env.dev) require('dotenv').config();
+if (!process.env.production) require('dotenv').config();
 const request = require('request');
 
 const client_id = process.env.github_id;
