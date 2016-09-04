@@ -9,9 +9,9 @@ let auth = (req, res) => {
         res.cookie('token', token, {maxAge: week});
         github.user(token, (user) => {
             user = JSON.parse(user);
-            let id = user.id;
+            let github_id = user.id;
             let username = user.login;
-            db.users.update({username}, {id, username, token}, {upsert: true}, () => {
+            db.users.insert({github_id, username, token}, () => {
                 res.redirect('/dashboard');
             });
         });

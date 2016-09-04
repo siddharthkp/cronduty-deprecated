@@ -19,8 +19,12 @@ let getPings = (id, callback) => {
     });
 };
 
-let getCrons = (token, callback) => {
+let getCrons = (token, res, callback) => {
     users.get(token, (user) => {
+        if (!user) {
+            res.redirect('/login');
+            return;
+        }
         let username = user.username;
         db.crons.find({username}, (err, data) => {
             callback(data);
@@ -35,7 +39,7 @@ let dashboard = (req, res) => {
         return;
     }
     users.get(token, (user) => {
-        getCrons(token, (crons) => {
+        getCrons(token, res, (crons) => {
             if (!crons.length) res.render('dashboard', {user, crons});
             for (let i = 0; i < crons.length; i++) {
                 let cron = crons[i];
