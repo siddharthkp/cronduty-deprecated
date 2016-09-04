@@ -13,7 +13,7 @@ include ./logo.pug
     each cron in crons
         .row.extra.room
             .cell.big
-                div !{cron.name}
+                div !{cron.id} : !{cron.name}
                 .description !{cron.time}
             .cell
                 div !{cron.last_ping}
