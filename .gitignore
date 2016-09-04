@@ -38,4 +38,4 @@ jspm_packages
 
 .env
 db
-crons.db
+.DS_Store

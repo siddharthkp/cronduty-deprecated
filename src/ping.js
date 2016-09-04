@@ -14,12 +14,12 @@ let done = (req, res) => {
     db.pings.find({id})
     .sort({start_time: -1})
     .limit(1)
-    .exec((err, docs) => {
-        if (!docs.length) res.end('end ' + req.params.id);
-        let _id = docs[0]._id;
+    .exec((err, rows) => {
+        if (!rows.length) res.end('end ' + req.params.id);
+        let _id = rows[0]._id;
         let status = 'DONE';
         let end_time = new Date().getTime();
-        db.pings.update({_id}, {$set: {status, end_time}}, (err, docs) => {
+        db.pings.update({_id}, {$set: {status, end_time}}, (err, rows) => {
             res.end('end ' + req.params.id);
         });
     });

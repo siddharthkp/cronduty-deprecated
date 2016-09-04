@@ -1,0 +1,48 @@
+.center {
+    display: block;
+    margin: 0 auto;
+}
+.center.text {
+    text-align: center;
+}
+.breathe {
+    margin: 100px;
+}
+.room {
+    margin: 20px auto;
+}
+.extra.room {
+    margin: 40px auto;
+}
+.wide {
+    width: 80%;
+}
+.clear {
+    clear: both;
+}
+.full {
+    width: 100%;
+}
+.half {
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.hidden {
+    display: none;
+}
+.cell {
+    float: left;
+    width: 15%;
+    box-sizing: border-box;
+}
+.big.cell {
+    width: 35%;
+}
+

@@ -1,0 +1,25 @@
+body, input, button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+}
+.header {
+    font-size: 2em;
+}
+label {
+    display: inline-block;
+    padding: 5px;
+    font-size: 0.9em;
+    color: #999;
+}
+label.error {
+    color: #EC686C;
+    min-height: 20px;
+}
+.description {
+    font-size: 0.8em;
+    color: #999;
+    padding: 5px 0;
+}
+

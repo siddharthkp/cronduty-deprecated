@@ -25,7 +25,15 @@
   },
   "homepage": "https://github.com/siddharthkp/cronduty#readme",
   "dependencies": {
+    "body-parser": "1.15.2",
+    "cookie-parser": "1.4.3",
+    "cron-parser": "2.1.1",
+    "dotenv": "2.0.0",
     "express": "4.14.0",
-    "nedb": "1.8.0"
+    "moment": "2.14.1",
+    "nedb": "1.8.0",
+    "prettycron": "0.10.0",
+    "pug": "2.0.0-beta6",
+    "request": "2.74.0"
   }
 }

@@ -1,0 +1,44 @@
+include ./head.pug
+script(src='scripts/zepto.min.js')
+script(src='scripts/cron.js')
+script(src='scripts/graph.js')
+script(src='scripts/chartist.min.js')
+script(src='scripts/chartist-plugin-tooltip.min.js')
+link(rel='stylesheet', type='text/css', href='style/chartist.min.css')
+link(rel='stylesheet', type='text/css', href='style/graph.css')
+
+include ./logo.pug
+
+.crons.list.center.wide
+    each cron in crons
+        .row.extra.room
+            .cell.big
+                div !{cron.name}
+                .description !{cron.time}
+            .cell
+                div !{cron.last_ping}
+                .description last ping
+            .cell(style='padding-left: 40px')
+                div !{cron.duration}
+                .description duration
+            .cell.big
+                .graph(data=cron.durations)
+            .clear
+
+.center.wide.room
+    button.silent#add + add new
+
+
+.center.wide.hidden.form
+    .half.room
+        label name
+        input.full(placeholder='backup script', name='name')
+        label.error(name='name')
+    .half.room
+        label time
+        input.full(placeholder='*/15 * * * *', name='time')
+        label.error(name='time')
+    .clear
+    button.left.no.button#cancel cancel
+    button.right.yes.button#save save
+    .clear

@@ -1,0 +1,13 @@
+input {
+    padding: 10px;
+    outline: none;
+    border: 1px solid #EEE;
+    transition: border-color 0.5s;
+}
+input:focus {
+    border-color: #489DF7;
+}
+input.error {
+    border-color: #EC686C;
+}
+

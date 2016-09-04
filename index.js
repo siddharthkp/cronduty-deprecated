@@ -1,14 +1,31 @@
 const ping = require('./src/ping');
 const web = require('./src/web');
+const auth = require('./src/auth');
+const cron = require('./src/cron');
 
 const express = require('express');
 const app = express();
+
+const pug = require('pug');
+app.set('view engine', 'pug');
+app.use(express.static('static'));
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded());
+
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 const port = process.env.PORT || 8080;
 app.listen(port);
 
 app.get('/start/:id', ping.start);
 app.get('/done/:id', ping.done);
-app.get('/get/:id', web.get);
-app.post('/register', web.register);
+
+app.get('/login', web.login);
+app.get('/auth', auth);
+
+app.get('/dashboard', web.dashboard);
+
+app.post('/cron', cron.save);
 

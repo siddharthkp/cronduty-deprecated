@@ -1,0 +1,39 @@
+.graph {
+    height: 100px;
+    position: relative;
+    bottom: 25px;
+}
+.ct-bar {
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+.ct-series-a .ct-bar {
+    stroke: #EEE;
+}
+.ct-series-b .ct-bar {
+    stroke: #489DF7;
+}
+.chartist-tooltip {
+    position: absolute;
+    display: inline-block;
+    padding: .5em;
+    background: #333;
+    color: #FFF;
+    text-align: center;
+    z-index: 1;
+}
+.chartist-tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #333;
+}
+.ct-grids, .ct-labels {
+    display: none;
+}
+
