@@ -26,14 +26,21 @@
   "homepage": "https://github.com/siddharthkp/cronduty#readme",
   "dependencies": {
     "body-parser": "1.15.2",
+    "compression": "1.6.2",
     "cookie-parser": "1.4.3",
     "cron-parser": "2.1.1",
     "dotenv": "2.0.0",
     "express": "4.14.0",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.0",
+    "gulp-concat-css": "2.3.0",
+    "gulp-purifycss": "0.2.0",
+    "gulp-sourcemaps": "1.6.0",
     "moment": "2.14.1",
     "nedb": "1.8.0",
     "prettycron": "0.10.0",
     "pug": "2.0.0-beta6",
     "request": "2.74.0"
-  }
+  },
+  "devDependencies": {}
 }

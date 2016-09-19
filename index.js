@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded());
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+const compression = require('compression');
+app.use(compression());
+
 const port = process.env.PORT || 8080;
 app.listen(port);
 

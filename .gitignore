@@ -39,3 +39,5 @@ jspm_packages
 .env
 db
 .DS_Store
+
+static/bundle
