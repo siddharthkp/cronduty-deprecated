@@ -9,7 +9,7 @@ const app = express();
 
 const pug = require('pug');
 app.set('view engine', 'pug');
-app.use(express.static('static'));
+app.use(express.static('static', {maxAge: 86400000}));
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded());
